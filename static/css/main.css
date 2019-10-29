@@ -1,0 +1,240 @@
+.flex {
+    display: flex;
+}
+
+.exposureBlock table {
+    border-spacing: 0px 1px;
+}
+
+.hidden {
+    display: none;
+}
+
+.scrollContainer {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scrollContainer .verticalScroll {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    /* Starting position */
+    -moz-transform:translateY(100%);
+    -webkit-transform:translateY(100%);	
+    transform:translateY(100%);
+    /* Apply animation to this element */	
+    -moz-animation: verticalScroll 60s linear infinite;
+    -webkit-animation: example1 60s linear infinite;
+    animation: verticalScroll 60s linear infinite;
+}
+   /* Move it (define the animation) */
+   @-moz-keyframes verticalScroll {
+    0%   { -moz-transform: translateY(100%); }
+    100% { -moz-transform: translateY(-100%); }
+   }
+   @-webkit-keyframes verticalScroll {
+    0%   { -webkit-transform: translateY(100%); }
+    100% { -webkit-transform: translateY(-100%); }
+   }
+   @keyframes verticalScroll {
+    0%   { 
+    -moz-transform: translateY(100%); /* Firefox bug fix */
+    -webkit-transform: translateY(100%); /* Firefox bug fix */
+    transform: translateY(100%); 		
+    }
+    100% { 
+    -moz-transform: translateY(-100%); /* Firefox bug fix */
+    -webkit-transform: translateY(-100%); /* Firefox bug fix */
+    transform: translateY(-100%); 
+    }
+}
+
+
+
+
+/* Move it (define the animation) */
+@-moz-keyframes example1 {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes example1 {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes example1 {
+    0%   { 
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%); 		
+    }
+    100% { 
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%); 
+    }
+   }
+   
+
+/** TEAMS **/
+.ARI {
+    background: #97233F;
+    color: #dedede;
+}
+
+.ATL {
+    background: #A71930;
+    color: #e2e2e2;
+}
+
+.BAL {
+    background: #241773;
+    color: #f9e67f;
+}
+
+.BUF {
+    background: #00338D;
+    color: #ff5173;
+}
+
+.CAR {
+    background: #0085CA;
+    color: #101820;
+}
+
+.CHI {
+    background: #00143F;
+    color: rgb(172, 150, 140);
+}
+
+.CIN {
+    background: #FB4F14;
+    color: black;
+}
+
+.CLE {
+    background: #311D00;
+    color: #FF3C00;
+}
+
+.DAL {
+    background: #003594;
+    color: #d4d4d4;
+}
+
+.DEN {
+    background: #FB4F14;
+    color: #002244;
+}
+
+.DET {
+    background: #0076B6;
+    color: #d2d2d2;
+}
+
+.GB {
+    background: #203731;
+    color: #FFB612;
+}
+
+.HOU {
+    background: #03202F;
+    color: #ff2d4f;
+}
+
+.IND {
+    background: #002C5F;
+    color: #A2AAAD;
+}
+
+.JAX {
+    background: #006778;
+    color: #D7A22A;
+}
+
+.KC {
+    background: #E31837;
+    color: #FFB81C;
+}
+
+.LAC {
+    background: #0080C6;
+    color: #FFC20E;
+}
+
+.LAR {
+    background: #002244;
+    color: #866D4B;
+}
+
+.MIA {
+    background:#008E97;
+    color: #FC4C02;
+}
+
+.MIN {
+    background: #4F2E84;
+    color: #FEC62F;
+}
+
+.NE {
+    background: #002244;
+    color: #fb9c9c;
+}
+
+.NO {
+    background:#D3BC8D;
+    color:#101820;
+}
+
+.NYG {
+    background: #0B2265;
+    color: #f58799;
+}
+
+.NYJ {
+    background:#125740;
+    color:#efefef;
+}
+
+.OAK {
+    background:#A5ACAF;
+    color:#000000;
+}
+
+.PHI {
+    background:#004C54;
+    color:#d2d2d2;
+}
+
+.PIT {
+    background:#FFB612;
+    color:#101820;
+}
+
+.SF {
+    background:#B3995D;
+    color: #AA0000;
+}
+
+.SEA {
+    background:#002244;
+    color: #69BE28;
+}
+
+.TB {
+    background:#D50A0A;
+    color: #ffac61;
+}
+
+.TEN {
+    background:#0C2340;
+    color: #418FDE;
+}
+
+.WAS {
+    background:#773141;
+    color: #FFB612;
+}

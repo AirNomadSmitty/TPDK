@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <link rel="stylesheet" href="/static/css/main.css"> 
+                <script type="text/javascript" src="/static/js/overlayExposures.js" defer></script>
+          </head>
+          <body>
+       
+   <div class="flex">
+    <div class="exposureBlock">
+        <table>
+            <thead>
+                <tr>
+                    <th>QB</th>
+                    <th>Percent</th>  
+                    <th>Projection</th>       
+    
+                </tr>
+            </thead>
+            <tbody>
+            {{ range index .Exposures "QB"}}
+            <tr class="{{.Player.Team}}">
+                <td>{{.Player.Name}}</td>
+                <td>{{.Percent}}%</td>
+                <td>{{.Player.Projection}}</td>
+
+            </tr>
+            {{ end }}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="exposureBlock hidden">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>RB</th>
+                    <th>Percent</th>  
+                    <th>Projection</th>       
+    
+                </tr>
+            </thead>
+            <tbody>
+            {{ range index .Exposures "RB"}}
+            <tr class="{{.Player.Team}}">
+                <td>{{.Player.Name}}</td>
+                <td>{{.Percent}}%</td>
+                <td>{{.Player.Projection}}</td>
+
+            </tr>
+            {{ end }}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="exposureBlock hidden">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>WR</th>
+                    <th>Percent</th>   
+                    <th>Projection</th>       
+    
+                </tr>
+            </thead>
+            <tbody>
+            {{ range index .Exposures "WR"}}
+            <tr class="{{.Player.Team}}">
+                <td>{{.Player.Name}}</td>
+                <td>{{.Percent}}%</td>
+                <td>{{.Player.Projection}}</td>
+
+            </tr>
+            {{ end }}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="exposureBlock hidden">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>TE</th>
+                    <th>Percent</th>
+                    <th>Projection</th>       
+
+                </tr>
+            </thead>
+            <tbody>
+            {{ range index .Exposures "TE"}}
+            <tr class="{{.Player.Team}}">
+                <td>{{.Player.Name}}</td>
+                <td>{{.Percent}}%</td>
+                <td>{{.Player.Projection}}</td>
+
+            </tr>
+            {{ end }}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="exposureBlock hidden">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>DST</th>
+                    <th>Percent</th>
+                    <th>Projection</th>       
+        
+                </tr>
+            </thead>
+            <tbody>
+            {{ range index .Exposures "DST"}}
+            <tr class="{{.Player.Team}}">
+                <td>{{.Player.Name}}</td>
+                <td>{{.Percent}}%</td>
+                <td>{{.Player.Projection}}</td>
+
+            </tr>
+            {{ end }}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

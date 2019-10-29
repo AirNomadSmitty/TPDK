@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="/static/css/main.css"> 
+   </head>
+
+   
+   <body>
+
+        <div class="scrollContainer">
+        <div class="verticalScroll">
+        <table>
+            <thead>
+                <tr>
+                    <th>Proj Score</th>
+                    <th>QB</th>
+                    <th>RB</th>
+                    <th>RB</th>
+                    <th>WR</th>
+                    <th>WR</th>
+                    <th>WR</th>
+                    <th>TE</th>
+                    <th>FLEX</th>
+                    <th>DST</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ range .Lineups }}
+                <tr>
+                        <td>{{printf "%.2f" .Score}}</td>
+                        <td class="{{.QB.Team}}">{{.QB.Name}}</td>
+                        {{ range .RBs }}
+                            <td class="{{.Team}}">{{.Name}}</td>
+                        {{ end }}
+                        {{ range .WRs }}
+                            <td class="{{.Team}}">{{.Name}}</td>
+                        {{ end }}
+                        <td class="{{.TE.Team}}">{{.TE.Name}}</td>
+                        <td class="{{.Flex.Team}}">{{.Flex.Name}}</td>
+                        <td class="{{.DST.Team}}">{{.DST.Name}}</td>
+                    </tr>
+                {{ end }}
+            </tbody>
+        </table>
+        </div>
+        </div>
+    </body>
+</html>

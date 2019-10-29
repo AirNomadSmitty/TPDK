@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="/static/css/main.css"> 
+   </head>
+   <body>
+        <h2>Exposures</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Player</th>
+                    <th>Percent</th>        
+                </tr>
+            </thead>
+            <tbody>
+            {{ range .Exposures}}
+            <tr>
+                <td>{{.Player.Player.Name}} {{if .Player.IsCaptain}}(CPT){{end}}</td>
+                <td>{{.Percent}}</td>
+            </tr>
+            {{ end }}
+            </tbody>
+        </table>
+
+        <h2>Lineups</h2>
+        <h3>Total Winnings: {{.TotalReward}}</h3>
+        <h3>Total Cashed: {{.CashCount}}</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Score</th>
+                    <th>Proj Score</th>
+                    <th>Random Score</th>
+                    <th>Earnings</th>
+                    <th>CPT</th>
+                    <th>Flex</th>
+                    <th>Flex</th>
+                    <th>Flex</th>
+                    <th>Flex</th>
+                    <th>Flex</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ range .Lineups }}
+                <tr>
+                        <td>{{printf "%.2f" .ActualScore}}</td>
+                        <td>{{printf "%.2f" .Score}}</td>
+                        <td>{{printf "%.2f" .RandomScore}}</td>
+                        <td>{{.Reward}}</td>
+                        <td class="{{.CPT.Player.Team}}">{{.CPT.Player.Name}}</td>
+                        {{ range .Flex }}
+                            <td class="{{.Player.Team}}">{{.Player.Name}}</td>
+                        {{ end }}
+                    </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </body>
+</html>
